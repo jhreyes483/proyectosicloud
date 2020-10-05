@@ -145,7 +145,7 @@ include_once '../../plantillas/nav/navN3.php';
                     <a class="btn btn-primary mx-auto btn-block" href="../../CU004-crearProductos.php"> <i class="fas fa-fw fa-wrench"></i>Crear producto</a>
                   </div><!-- fin de col de 4 1 -->
                   <div class="col-md-4 ">
-                    <a class="btn btn-info mx-auto btn-block" href="../../CU003-ingresoproducto.php "> <i class="fas fa-check"></i>Ingreso de producto pedido</a>
+                    <a class="btn btn-info mx-auto btn-block" href="../../CU003-ingresoProducto.php "> <i class="fas fa-check"></i>Ingreso de producto pedido</a>
                     <a class="btn btn-primary mx-auto btn-block" href="../../edicionProductoTabla.php"> <i class="fas fa-fw fa-wrench"></i>Editar productos</a>
 
                   </div><!-- fin de col de 4 2 -->
