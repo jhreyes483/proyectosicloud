@@ -5,7 +5,7 @@ rutIniFromIndexRaiz();
 
 <article>
     <div class="container-jav">
-        <video loop autoplay muted controls muted poster="fonts/banner01.jpg" width="100%" class="bk-rgb-video">
+        <video loop autoplay muted muted poster="fonts/banner01.jpg" width="100%" class="bk-rgb-video">
             <source src="./vista/fonts/boston.mp4" type="video/mp4">
         </video>
         <div class="textSobreVideo">
