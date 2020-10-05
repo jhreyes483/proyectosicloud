@@ -7,7 +7,7 @@ include_once 'controlador/controladorrutas.php';
 //include_once './vista/rol/admin/iniAdmin.php';
 rutIniFromIndexRaiz();
 //echo $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
-echo 'hola javier';
+echo 'hola mundo';
 
 ?>
 <article>
