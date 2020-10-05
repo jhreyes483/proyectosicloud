@@ -1,7 +1,9 @@
 <?php
-include_once '../controlador/controladorsession.php';
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
 $mensaje = "";
 
+echo 'controlador carrito';
 // captura los datos que vienen por pos, desemcrita y almacena en varibles
 if (isset($_POST['btnCatalogo'])) {
     switch ($_POST['btnCatalogo']) {

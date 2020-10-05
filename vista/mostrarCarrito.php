@@ -1,11 +1,16 @@
 <?php
 //include_once 'session/config.php';
 include_once '../controlador/carrito.php';
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+
+/*
 include_once 'plantillas/cuerpo/inihtmlN1.php';
 include_once '../controlador/controladorsession.php';
 include_once 'plantillas/nav/navN1.php';
 include_once 'plantillas/plantilla.php';
-include_once '../controlador/controladorsession.php';
+*/
+
 ?>
 
 <br>
@@ -98,7 +103,6 @@ include_once '../controlador/controladorsession.php';
 
 
 <?php
-
 rutFinFooterFrom();
 rutFromFin();
 ?>
