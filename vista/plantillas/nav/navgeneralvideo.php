@@ -9,24 +9,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-5">
             <li class="nav-item active">
-                <a class="nav-link ml-5" href="index.php">INICIO<span class="sr-only">(current)</span></a>
+                <a class="nav-link ml-5" href="#">INICIO<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle px-3 " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     FERRETERIA
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="CU000-quienessomos.php">QUIENES SOMOS</a>
-                    <a class="dropdown-item" href="CU000-misionyvision.php">MISION Y VISION</a>
+                    <a class="dropdown-item" href="vista/CU000-quienessomos.php">QUIENES SOMOS</a>
+                    <a class="dropdown-item" href="vista/CU000-misionyvision.php">MISION Y VISION</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link px-3 " href="catalogo.php?ops=1">CATALOGO DE PRODUCTOS<span class="sr-only">(current)</span></a>
+                <a class="nav-link px-3 " href="vista/catalogo.php?ops=1">CATALOGO DE PRODUCTOS<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link px-3 " href="Promociones.php">PROMOCIONES<span class="sr-only">(current)</span></a>
+                <a class="nav-link px-3 " href="vista/Promociones.php">PROMOCIONES<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link pl-3 pr-5" href="CU000-contact.php">CONTACTO<span class="sr-only">(current)</span></a>
+                <a class="nav-link pl-3 pr-5" href="vista/CU000-contact.php">CONTACTO<span class="sr-only">(current)</span></a>
             </li>
             
         </ul>

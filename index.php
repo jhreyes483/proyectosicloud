@@ -155,8 +155,8 @@ rutIniFromIndexRaiz();
 <script src="js/funcions.js"></script>
 
 <?php
-
-include_once 'plantillas/cuerpo/footerN1.php';
+rutFinFooterFrom();
+rutFromFin();
 ?>
 
 <footer class="sticky-footer bg-dark">
