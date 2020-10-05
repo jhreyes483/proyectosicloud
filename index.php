@@ -116,17 +116,17 @@ rutIniFromIndexRaiz();
     <div class="row">
                     <div class="col-lg-4 col-md-6 mx-auto my-2">
                 <div class="   card-img card card-body my-4 border border-warning ">
-                    <img class=" sliderjav rounded mx-auto shadow" width="300" height="250" src="./vista/fonts/slider-1/img2.jpg">
+                <img class=" sliderjav rounded mx-auto shadow" width="300" height="250">
                 </div>
             </div>
                     <div class="col-lg-4 col-md-6 mx-auto my-2">
                 <div class="   card-img card card-body my-4 border border-warning ">
-                    <img class=" sliderjav rounded mx-auto shadow" width="300" height="250" src="./vista/fonts/slider-1/img2.jpg">
+                <img class=" sliderjav rounded mx-auto shadow" width="300" height="250">
                 </div>
             </div>
                     <div class="col-lg-4 col-md-6 mx-auto my-2">
                 <div class="   card-img card card-body my-4 border border-warning ">
-                    <img class=" sliderjav rounded mx-auto shadow" width="300" height="250" src="./vista/fonts/slider-1/img2.jpg">
+                <img class=" sliderjav rounded mx-auto shadow" width="300" height="250">
                 </div>
             </div>
             </div>

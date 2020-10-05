@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
   var indiceImagenes = 1;
   function cambiarImagenes(){
   nexImg =  imagenes[ indiceImagenes ];
-  $("sliderjav").attr("src", nexImg );
+  $(".sliderjav").attr("src", nexImg );
   
   if(indiceImagenes < 2 ){
     indiceImagenes++;
