@@ -142,7 +142,7 @@ include_once '../../plantillas/nav/navN3.php';
                 <!-- sesion de prodcutos -->
                 <div class="row">
                   <div class="col-md-4 ">
-                    <a class="btn btn-primary mx-auto btn-block" href="vista/CU004-crearproductos.php"> <i class="fas fa-fw fa-wrench"></i>Crear producto</a>
+                    <a class="btn btn-primary mx-auto btn-block" href="vista/CU004-crearProducto.php"> <i class="fas fa-fw fa-wrench"></i>Crear producto</a>
                   </div><!-- fin de col de 4 1 -->
                   <div class="col-md-4 ">
                     <a class="btn btn-info mx-auto btn-block" href="../../CU003-ingresoproducto.php "> <i class="fas fa-check"></i>Ingreso de producto pedido</a>
