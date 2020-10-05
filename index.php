@@ -1,19 +1,11 @@
 <?php
-// include_once 'plantillas/nav/navgeneralvideo.php';
-// include_once 'plantillas/cuerpo/inihtmlN1.php';
-
-
 include_once 'controlador/controladorrutas.php';
-//include_once './vista/rol/admin/iniAdmin.php';
 rutIniFromIndexRaiz();
-//echo $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
-echo 'hola mundo';
-
 ?>
 <article>
     <div class="container-jav">
         <video loop autoplay muted poster="fonts/banner01.jpg" width="100%" class="bk-rgb-video">
-            <source src="fonts/boston.mp4" type="video/mp4">
+            <source src="./vista/fonts/boston.mp4" type="video/mp4">
         </video>
         <div class="textSobreVideo">
             <h1 class="texto-video animate__animated">Importadora de herramientas</h1>
@@ -21,9 +13,7 @@ echo 'hola mundo';
     </div>
 </article>
 <h1><a href="./vista/rol/admin/iniAdmin.php">Inicio admin</a>  </h1>
-
 <hr class="border my-4" id="formlogin" /><br>
-
 <div class="col-md-12 mt-5 ">
     <div class="row">
         <div class="col-xs-12 col-sm-11 col-md-9 mx-auto">
@@ -35,13 +25,13 @@ echo 'hola mundo';
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="fonts/slider0.png" alt="First slide">
+                        <img class="d-block w-100" src="./vista/fonts/slider0.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="fonts/slider1.png" alt="Second slide">
+                        <img class="d-block w-100" src="./vista/fonts/slider1.png" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="fonts/slider2.png" alt="Third slide">
+                        <img class="d-block w-100" src="./vista/fonts/slider2.png" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -65,7 +55,7 @@ echo 'hola mundo';
 <div class="col-md-12 mt-5">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mb-5 mx-auto">
-            <div class="card text-white banner1  "> <img class="card-img" src="fonts/banner05.jpg" alt="Card image" width="600px" height="500px">
+            <div class="card text-white banner1  "> <img class="card-img" src="./vista/fonts/banner05.jpg" alt="Card image" width="600px" height="500px">
                 <style>
                    .card-img-overlay:hover {
                        background: black;
@@ -88,9 +78,6 @@ echo 'hola mundo';
         </div>
     </div>
 </div><br><br>
-
-
-
 <button class="btn btn-sm btn-warning toggle">Mostrar Noticias</button>
 <div class="col-md-12 mt-5">
     <div class="row">
@@ -117,7 +104,6 @@ echo 'hola mundo';
         </div>
     </div>
 </div><br><br><br><br><br><br><br><br><hr class="border my-4"  /><br>
-
 <section class="banner-2 text-center">
 
     <div class="container-text-img">
@@ -126,12 +112,6 @@ echo 'hola mundo';
         <h5 class="mt-3">Ventas al por mayor y al detal</h5>
     </div>
 </section>
-
-
-
-
-
-
 <div class="container">
     <div class="row">
         
@@ -142,39 +122,15 @@ echo 'hola mundo';
             </div>
     </div>
 </div>
-
 <div class="container">
     <div class="map-responsive">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.92411032952!2d-74.20988058573687!3d4.607607443741915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e22e1a69dad%3A0x37ca3bcc91bfba65!2sCl.%2078%20Sur%20%2378-71%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1590105646415!5m2!1ses!2sco" width="900" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 </div>
-
-
-
-
-<script src="js/funcions.js"></script>
-
+<script src="./vista/estilos/js/funcions.js"></script>
+<script src="./vista/estilos/js/login.js"></script>
 <?php
 rutFinFooterFrom();
 rutFromFin();
 ?>
-
-<footer class="sticky-footer bg-dark">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Sicloud</span>
-        </div>
-    </div>
-</footer>
-
-
-
-<script src="estilos/js/login.js">
-</script>
-<?php
-rutFromFin();
-rutFinFooterFrom();
-?>
-
-
 <!--    IMPORTANTE VERIFICAR CONDIGO JQUERY -->

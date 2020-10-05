@@ -103,7 +103,7 @@ include_once 'plantillas/plantilla.php';
 
 
 <?php
-rutFinFooterFrom();
+
 rutFromFin();
 ?>
 
