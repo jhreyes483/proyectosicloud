@@ -51,7 +51,7 @@ if (  !isset($cons)  ){
       include_once 'vista/plantillas/cuerpo/inihtmlN0.php';
       include_once 'vista/plantillas/nav/navgeneralvideo.php';
       include_once 'vista/estilos/css/jav.css';
-      include_once 'vista/estilos/css/jav2.css';
+      include_once 'vista/estilos/js/funcions.js';
    }
 
    function rutFinFooterFromRaiz(){
