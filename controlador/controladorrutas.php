@@ -69,11 +69,11 @@ if (  !isset($cons)  ){
    }
    
    function rutFromFin(){ 
-      include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/vista/plantillas/cuerpo/finhtml.php';
+      include_once 'vista/plantillas/cuerpo/finhtml.php';
    }
    
    function rutFinFooterFrom(){ 
-      include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/vista/plantillas/cuerpo/footerN1.php';
+      include_once 'vista/plantillas/cuerpo/footerN1.php';
    }
 
 
