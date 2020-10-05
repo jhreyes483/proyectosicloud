@@ -42,9 +42,9 @@ debug.innerHTML = strDebug + "Posicion actual " + y + "px<br>"
 // 3 slider arriba del footer
 window.addEventListener('load', function() {
     var imagenes = [];
-    imagenes[0] = './vista/fonts/slider-1/img1.jpg';
-    imagenes[1] = './vista/fonts/slider-1/img2.jpg';
-    imagenes[2] = './vista/fonts/slider-1/img3.jpg';
+    imagenes[0] = 'vista/fonts/slider-1/img1.jpg';
+    imagenes[1] = 'vista/fonts/slider-1/img2.jpg';
+    imagenes[2] = 'vista/fonts/slider-1/img3.jpg';
   
   var indiceImagenes = 1;
   function cambiarImagenes(){
