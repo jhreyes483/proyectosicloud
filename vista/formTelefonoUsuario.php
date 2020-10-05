@@ -1,13 +1,8 @@
 <?php
-include_once 'plantillas/plantilla.php';
-include_once '../modelo/class.medida.php';
-include_once '../modelo/class.telefono.php';
-
-include_once 'plantillas/cuerpo/inihtmlN2.php';
-include_once 'plantillas/nav/navN2.php';
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
 cardtitulo("Directorio telefonico Usuarios");
-include_once '../controlador/controlador.php';
-include_once '../controlador/controladorsession.php';
+
 ?>
 
 <div class="container-fluid col-md col-xl-7">
@@ -66,7 +61,7 @@ include_once '../controlador/controladorsession.php';
                     <td><?php echo $row['nom_empresa'] ?></td>
 
 
-                    <!-- formEdicion.php?accion=editarMedia&&id=<?php// echo $row['ID_medida'] ?> -->
+  
                     <td>
                         <a href="   formEdicionEmpresa.php?id=<?php echo $row['ID_rut'] ?> " class="btn btn-circle btn-secondary"><i class="fas fa-marker"></i></a>
                         <a href="../controlador/controlador.php?accion=eliminarEmpresa&&id=<?php echo $row['ID_rut'] ?>" class="btn btn-circle btn-danger"><i class="far fa-trash-alt"></i></a>
@@ -88,5 +83,6 @@ include_once '../controlador/controladorsession.php';
 </div><!-- Fin container -->
 
 <?php
-include_once 'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();
 ?>

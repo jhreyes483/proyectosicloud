@@ -1,15 +1,11 @@
 <?php
-include_once '../controlador/controlador.php';
-include_once '../controlador/post.php';
-include_once 'plantillas/plantilla.php';
-include_once 'plantillas/cuerpo/inihtmlN1.php';
-include_once 'plantillas/nav/navN1.php';
-include_once '../controlador/controladorsession.php';
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
 ?>
 <?php
 function selectDocumeto(){
-    $objConDoc =  Documento::ningunDatoD();
-    $datos     =  $objConDoc->verDocumeto();
+    $objCon =  new ControllerDoc();
+    $datos     =  $objCon->selectDocumento();
     foreach($datos as $i => $d ) {
     ?>
     
@@ -18,17 +14,17 @@ function selectDocumeto(){
 }
 
 function selectRol(){
-    $objConRol =  Rol::ningunDato();
-    $datosRol  =  $objConRol->verRol();
+    $objCon =  new ControllerDoc();
+    $datosRol  =  $objCon->verRol();
     foreach($datosRol as $i =>  $d) {
     ?>
         <option value="<?= $d[0]   ?>"><?=  $d[1]   ?></option>
     <?php  }
 }
-$objConRol =  Rol::ningunDato();
-$datosRol  =  $objConRol->verRol();
+$objCon =  new ControllerDoc();
+$datosRol  =  $objCon->verRol();
 
-echo '<pre>'; print_r($datosRol); echo '</pre>';
+
 
 cardtitulo("Actualizar Usuario");
 ?>
@@ -67,8 +63,8 @@ cardtitulo("Actualizar Usuario");
                         </div><!-- fin contenedor  de selectores -->
 <?php
 $id = $_GET['ID_us'];
-$objus= Usuario::ningunDato();
-$datos = $objus->verDatoPorId($id);
+$objCon =  new ControllerDoc();
+$datos = $objCon ->verDatoPorId($id);
 if(isset($datos)){
     foreach ($datos as $i => $d){
 ?>
@@ -126,7 +122,9 @@ if(isset($datos)){
         </div>
     </div>
 </div>
+</div>
+</div>
 <?php 
-include_once 'plantillas/cuerpo/footerN1.php'; 
-include_once 'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();
 ?>

@@ -1,6 +1,6 @@
 <?php
 //comprobacion de rol
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 //comprobacion de rol
 $in = false;

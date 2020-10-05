@@ -1,17 +1,12 @@
 <?php
 
 
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
-/*
-include_once 'plantillas/plantilla.php';
-include_once 'plantillas/cuerpo/inihtmlN1.php';
-include_once 'plantillas/nav/navN1.php';
-include_once '../controlador/controladorsession.php';
-include_once '../controlador/carrito.php';
-*/
-
 $objMod = new ControllerDoc();
+$num = 0;
+$datos = $objMod->verProductos();
+
 
 function selectCategorias(){
     $objMod = new ControllerDoc();
@@ -22,6 +17,7 @@ function selectCategorias(){
         <option value="<?= $row['ID_categoria']  ?>"><?= $row['nom_categoria']    ?></option>
 <?php }
 }
+
 
 function alerta(){
     if (isset($_SESSION['message'])) {
@@ -40,14 +36,16 @@ function alerta(){
 
 //================================================================================
 // Datos
-$num = 0;
-$datos = $objMod->verProductos();
+
+
+
  // Todos los productos default
 if (isset($_REQUEST['busqueda'])) :
     $datos = $objMod->buscarPorNombreProducto($_REQUEST['busqueda']);
 endif;
 if (isset($_REQUEST['cat'])) :
     $datos = $objMod->verPorCategoria($_GET['cat']);
+ 
    // $datos = Producto::verPorCategoria($_GET['cat']);
 endif;
 
@@ -143,6 +141,6 @@ function mostrarCatalogo($datos){
 </div>
 
 <?php
-include_once 'plantillas/cuerpo/footerN1.php';
-include_once 'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();
 ?>

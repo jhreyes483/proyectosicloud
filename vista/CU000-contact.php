@@ -1,9 +1,7 @@
 <?php
-
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 ?>
-
 <div class="col-md-12 mt-5">
     <div class="row">
         <div class="col-md-12 text-center text-white ">
@@ -45,11 +43,7 @@ rutFromIni();
         </div>
     </div>
 </div>
-
-
 <?php 
 rutFinFooterFrom();
 rutFromFin();
-//include_once 'plantillas/cuerpo/footerN1.php'; 
-//include_once 'plantillas/cuerpo/finhtml.php';
 ?>

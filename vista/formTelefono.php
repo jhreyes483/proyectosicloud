@@ -1,12 +1,6 @@
 <?php
-
-include_once '../controlador/controladorsession.php';
-//include_once '../controlador/controladorsession.php';
-include_once '../controlador/controlador.php';
-include_once 'plantillas/plantilla.php';
-include_once '../modelo/class.rol.php';
-include_once 'plantillas/cuerpo/inihtmlN2.php';
-include_once 'plantillas/nav/navN2.php';
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
 $us = false;
 $em = false;
 //include_once '../controlador/controladorforms.php';
@@ -282,7 +276,7 @@ if ((isset($datosTabla))) {
         </div>
 
         <?php
-        include_once 'plantillas/cuerpo/finhtml.php';
-        include_once 'plantillas/cuerpo/footerN2.php';
+rutFinFooterFrom();
+rutFromFin();
         // fin de validadcion y ejecucion de permisos por rol
         ?>

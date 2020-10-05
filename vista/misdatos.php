@@ -12,8 +12,9 @@ include_once '../controlador/controladorsession.php';
 include_once '../controlador/controlador.php';
 */
 
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
-rutIniInactiva();
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+
 cardtitulo('Mis datos');
 
 ?>
@@ -142,7 +143,6 @@ if (isset($_SESSION['message'])) {
 
 
 <?php
-
-
-include_once  'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();;
 ?>

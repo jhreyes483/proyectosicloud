@@ -1,10 +1,14 @@
 <?php
-include_once 'plantillas/plantilla.php';
-include_once 'plantillas/nav/navgeneral.php';
-include_once 'plantillas/cuerpo/inihtmlN1.php';
-include_once '../controlador/controlador.php';
+
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+$objModProd = new ControllerDoc();
+$datos = $objModProd->verPromociones();
 
 
+
+            // $objModProd->ver($datos);
+         
 cardtitulo('Promociones');
 
 ?>
@@ -57,6 +61,7 @@ cardtitulo('Promociones');
 
 
 <?php
+/*
 //include_once '../../plantillas/nav/navN1.php';
 //include_once 'session/sessiones.php';
 //echo print_r($_SESSION['usuario']);
@@ -64,7 +69,7 @@ cardtitulo('Promociones');
 include_once 'plantillas/plantilla.php';
 include_once '../modelo/class.producto.php';
 include_once '../modelo/class.categoria.php';
-
+*/
 
 
 
@@ -96,14 +101,17 @@ include_once '../modelo/class.categoria.php';
 
             <!-- <?php 
                 // $num = 0;
-                $datos = Producto::verPromociones();
+              //  $datos = Producto::verPromociones();
+
+
+
             ?> -->
 
         <div class="container">
             <div class="row">
                 <?php
-                $objModProd = new ControllerDoc();
-                $datos = $objModProd ->verPromociones();
+
+
                 foreach ($datos as $i => $row) {
                 
                 // while ($row = $datos->fetch_assoc())

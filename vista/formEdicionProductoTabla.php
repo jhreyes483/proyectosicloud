@@ -1,11 +1,16 @@
 <?php
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+
+
+/*
 include_once '../modelo/class.producto.php';
 include_once 'plantillas/plantilla.php';
 include_once 'plantillas/cuerpo/inihtmlN2.php';
 include_once 'plantillas/nav/navN2.php';
 include_once '../controlador/controladorsession.php';
 include_once '../controlador/controlador.php';
-
+*/
 $objModPro = new ControllerDoc();
 cardtitulo('Edicion producto')
 ?>
@@ -55,5 +60,6 @@ cardtitulo('Edicion producto')
 
 
         <?php
-        include_once 'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();
         ?>

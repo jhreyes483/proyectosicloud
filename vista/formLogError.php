@@ -1,4 +1,7 @@
 <?php
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+/*
 include_once '../modelo/class.factura.php'; 
 include_once '../modelo/class.error.php';
 include_once 'plantillas/plantilla.php';
@@ -10,6 +13,7 @@ include_once 'plantillas/nav/navN2.php';
 
 include_once '../controlador/controlador.php';
 include_once '../controlador/controladorsession.php';
+*/
 cardtitulo("Log error");
 ?>
 
@@ -88,5 +92,6 @@ cardtitulo("Log error");
 </div><!-- Fin container -->
 
 <?php
-include_once 'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();
 ?>

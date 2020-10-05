@@ -9,7 +9,7 @@ include_once '../modelo/class.factura.php'; // Se requiere para los datos de la 
 include_once '../controlador/controlador.php';
 //$us = Factura::ningunDato();
 */
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 
 

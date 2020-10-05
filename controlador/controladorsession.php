@@ -1,4 +1,6 @@
 <?php
+
+
 define("KEY", "sicloud");
 define("COD", "AES-128-ECB");
 
@@ -77,6 +79,7 @@ class Session{
 
 $obj = new Session();
 $obj->inicioSesion();
+
 //$obj->validarSesion();
 
 if(isset($_GET['cerrar']) ){

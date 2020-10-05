@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 
 //comprobacion de rol
@@ -26,10 +26,7 @@ if ($in == false) {
 
     //------------------------------------------------------------------------------------
 
-    include_once 'plantillas/plantilla.php';
-   // include_once 'clases/class.usuario.php';
-    include_once '../modelo/class.factura.php';
-  //  include_once 'clases/class.producto.php';
+
 
 ?>
     <!-- col 12 -->
@@ -39,9 +36,6 @@ if ($in == false) {
         <meta charset="UTF-8">
         <?php //include_once 'js/scripts.php';  
 
-        include_once '../controlador/controladorsession.php';
-        include_once '../controlador/controlador.php';
-        include_once 'plantillas/cuerpo/inihtmlN1.php';
         ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,18 +1,8 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 
-/*
-include_once 'plantillas/plantilla.php';
 
-include_once 'plantillas/cuerpo/inihtmlN2.php';
-include_once 'plantillas/nav/navN2.php';
-include_once '../modelo/class.rol.php';
-include_once '../modelo/class.documento.php';
-include_once '../modelo/class.login.php';
-include_once '../modelo/class.usuario.php';
-include_once '../controlador/controladorsession.php';
-*/
 cardtitulo('Mis datos');
 
 ?>

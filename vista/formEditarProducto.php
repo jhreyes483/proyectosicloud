@@ -1,4 +1,7 @@
 <?php
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+/*
 include_once 'plantillas/plantilla.php';
 include_once '../modelo/class.conexion.php';
 include_once '../modelo/class.categoria.php';
@@ -10,7 +13,7 @@ include_once 'plantillas/cuerpo/inihtmlN2.php';
 include_once 'plantillas/nav/navN2.php';
 include_once '../controlador/controladorsession.php';
 include_once '../controlador/controlador.php';
-
+*/
 cardtitulo("Editar producto");
 ?>
 
@@ -182,6 +185,7 @@ if (isset($_GET['accion'])) {
 
     } // fin de accion ver producto
 } // fin de asset get accion
-include_once 'plantillas/cuerpo/finhtml.php';
+rutFinFooterFrom();
+rutFromFin();
 
 ?>

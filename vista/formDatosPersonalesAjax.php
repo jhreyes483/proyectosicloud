@@ -59,12 +59,17 @@
 <body>
 
     <?php
+
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+    /*
     include_once '../modelo/class.ciudad.php';
     include_once '../modelo/class.localidad.php';
     include_once '../modelo/class.barrio.php';
     include_once '../controlador/controladorsession.php';
     include_once 'plantillas/plantilla.php';
     include_once '../modelo/class.notificacion.php';
+*/
 
     ?>
 
@@ -250,3 +255,7 @@
 
     </div><!-- fin de container -->
 
+<?php
+rutFinFooterFrom();
+rutFromFin();
+?>

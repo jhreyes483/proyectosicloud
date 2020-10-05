@@ -1,16 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
-rutFromIni();
-
-/*
-require_once 'plantillas/plantilla.php';
-include_once 'plantillas/cuerpo/inihtmlN1.php';
-include_once 'plantillas/nav/navN1.php';
-include_once '../controlador/controladorsession.php';
-*/
-
-
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 ?>
 
@@ -100,6 +89,4 @@ rutFromIni();
 <?php 
 rutFinFooterFrom();
 rutFromFin();
-// include_once 'plantillas/cuerpo/footerN1.php'; 
-// include_once 'plantillas/cuerpo/finhtml.php';
 ?>

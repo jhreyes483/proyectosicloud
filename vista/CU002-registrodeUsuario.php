@@ -1,13 +1,12 @@
 <?php
-
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
-
+$objCon = new ControllerDoc();
 
 
 function selectDocumeto(){
-    $objConDoc =  Documento::ningunDatoD();
-    $datos     =  $objConDoc->verDocumeto();
+    $objCon = new ControllerDoc();
+    $datos     =  $objCon->selectDocumento();
     foreach($datos as $i => $d ) {
     ?>
         <option value="<?= $d[0] ?>"><?= $d[1] ?></option>
@@ -15,8 +14,8 @@ function selectDocumeto(){
 }
  
 function selectRol(){
-    $objConRol =  Rol::ningunDato();
-    $datosRol  =  $objConRol->verRol();
+    $objCon = new ControllerDoc();
+    $datosRol  =  $objCon->verRol();
     foreach($datosRol as $i =>  $d){
 ?>
     <option value="<?= $d[0]   ?>"><?=  $d[1]   ?></option>

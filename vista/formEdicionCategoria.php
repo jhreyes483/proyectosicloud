@@ -1,4 +1,7 @@
 <?php
+include_once '../controlador/controladorrutas.php';
+rutFromIni();
+/*
 include_once 'plantillas/plantilla.php';
 
 include_once '../modelo/class.empresa.php';
@@ -8,6 +11,7 @@ include_once 'plantillas/cuerpo/inihtmlN2.php';
 include_once 'plantillas/nav/navN2.php';
 include_once '../controlador/controladorsession.php';
 include_once '../controlador/controlador.php';
+*/
 //-----------------------------------------------------------------------------------
 
 cardtitulo('Edicion categoria');
@@ -42,5 +46,6 @@ if ((isset($_GET['id']))) {
     </div>
 <?php
  }
-include_once 'plantillas/cuerpo/finhtml.php';
+ rutFinFooterFrom();
+ rutFromFin();
 ?>

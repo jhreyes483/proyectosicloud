@@ -53,10 +53,10 @@ if (  !isset($cons)  ){
    }
 
    function rutIniInactiva(){
-      include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/vista/plantillas/plantilla.php';
-      include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/vista/plantillas/cuerpo/inihtmlN1.php';
-      include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/vista/plantillas/nav/nav/navgeneral.php';
-      session_start();
+      include_once 'plantillas/plantilla.php';
+      include_once 'plantillas/cuerpo/inihtmlN1.php';
+      include_once 'plantillas/nav/navN1.php';
+      include_once '../controlador/controladorsession.php';
       session_destroy();
    }
 
@@ -64,8 +64,8 @@ if (  !isset($cons)  ){
       include_once 'plantillas/plantilla.php';
       include_once 'plantillas/cuerpo/inihtmlN1.php';
       include_once 'plantillas/nav/navN1.php';
-      include_once '../controlador/controladorsession.php';
       include_once '../controlador/controlador.php'; 
+      include_once '../controlador/controladorsession.php';
    }
    
    function rutFromFin(){ 

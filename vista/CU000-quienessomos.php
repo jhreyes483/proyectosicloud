@@ -1,12 +1,12 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
 ?>
 
 <div class="col-md-12 mt-5">
     <div class="row">
         <div class="col-md-12 text-center text-white">
-            <?php cardAviso() ?>
+
             <hr class="border" />
         </div>
         <div class="col-xs-12 col-sm-12 col-md-10 mx-auto">

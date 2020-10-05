@@ -1,15 +1,7 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
-/*
-include_once '../modelo/class.factura.php'; 
-include_once '../modelo/class.modificacion.php';
-include_once 'plantillas/plantilla.php';
-include_once 'plantillas/cuerpo/inihtmlN2.php';
-include_once 'plantillas/nav/navN2.php';
-include_once '../controlador/controlador.php';
-include_once '../controlador/controladorsession.php';
-*/
+
 cardtitulo("Control de modificaiones");
 
 $objModModi = new ControllerDoc();
@@ -79,7 +71,7 @@ $objModModi = new ControllerDoc();
                     <td><?php  echo $row['nom_rol'] ?></td>
 
 
-                    <!-- formEdicion.php?accion=editarMedia&&id=<?php// echo $row['ID_medida'] ?> -->
+¡
                     <td>
                         <a href="../controlador/controlador.php?accion=eliminarError&&id=<?= $row['ID_error'] ?>" class="btn btn-circle btn-danger"><i class="far fa-trash-alt"></i></a>
 

@@ -1,20 +1,8 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controladorrutas.php';
+include_once '../controlador/controladorrutas.php';
 rutFromIni();
-
-
-
 cardtitulo('Edicion producto')
 ?>
-
-
-
-
-  
-
-    
-
-
         <table class="table table text-center table-striped  table-bordered bg-white table-sm col-md-8 col-sm-4 col-xs-12 mx-auto">
             <thead>
                 <tr>
