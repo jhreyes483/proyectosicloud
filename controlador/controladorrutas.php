@@ -69,11 +69,11 @@ if (  !isset($cons)  ){
    }
    
    function rutFromFin(){ 
-      include_once 'vista/plantillas/cuerpo/finhtml.php';
+      include_once 'plantillas/cuerpo/finhtml.php';
    }
    
    function rutFinFooterFrom(){ 
-      include_once 'vista/plantillas/cuerpo/footerN1.php';
+      include_once 'plantillas/cuerpo/footerN1.php';
    }
 
 
