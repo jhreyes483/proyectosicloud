@@ -52,6 +52,11 @@ if (  !isset($cons)  ){
       include_once 'vista/plantillas/nav/navgeneralvideo.php';
    }
 
+   function rutFinFooterFromRaiz(){
+      include_once 'vista/plantillas/cuerpo/footerN1.php';
+      include_once 'vista/plantillas/cuerpo/finhtml.php';
+   }
+
    function rutIniInactiva(){
       include_once 'plantillas/plantilla.php';
       include_once 'plantillas/cuerpo/inihtmlN1.php';

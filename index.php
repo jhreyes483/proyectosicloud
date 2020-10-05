@@ -12,7 +12,6 @@ rutIniFromIndexRaiz();
         </div>
     </div>
 </article>
-<h1><a href="./vista/rol/admin/iniAdmin.php">Inicio admin</a>  </h1>
 <hr class="border my-4" id="formlogin" /><br>
 <div class="col-md-12 mt-5 ">
     <div class="row">
@@ -130,7 +129,6 @@ rutIniFromIndexRaiz();
 <script src="./vista/estilos/js/funcions.js"></script>
 <script src="./vista/estilos/js/login.js"></script>
 <?php
-rutFinFooterFrom();
-rutFromFin();
+rutFinFooterFromRaiz();
 ?>
 <!--    IMPORTANTE VERIFICAR CONDIGO JQUERY -->
