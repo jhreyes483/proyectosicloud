@@ -203,7 +203,7 @@ class ControllerDoc
       //  return $this->objModProd->verProductosGrafica();
     }
     public function ConteoProductosT(){
-      //  return $this->objModProd->ConteoProductosT();
+       return $this->objModProd->ConteoProductosT();
     }
     public function EliminarProducto($id){
      //   return $this->objModProd->EliminarProducto($id);
