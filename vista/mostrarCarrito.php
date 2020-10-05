@@ -97,7 +97,11 @@ include_once '../controlador/controladorsession.php';
 </div><!-- container -->
 
 
+<?php
 
+rutFinFooterFrom();
+rutFromFin();
+?>
 
 </body>
 

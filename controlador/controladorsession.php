@@ -87,13 +87,13 @@ if(isset($_GET['cerrar']) ){
    $obj->cerrarSesion();
    switch ($_GET['cerrar']) {
       case 1:
-         header("location: ../vista/index.php");
+         header("location: ../index.php");
       break;
       case 2:
-         header("location: ../vista/index.php");
+         header("location: ../index.php");
       break;
       case 3:
-         header("location: ../vista/index.php");
+         header("location: ../index.php");
       break;
 
       default:
