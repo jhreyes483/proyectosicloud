@@ -146,7 +146,9 @@ class SQL extends Conexion{
         $consulta->bindValue(":id", $r);
         $result = $consulta->execute();
         $result = $consulta->fetchAll();
+        echo '<pre>';print_r($result); echo '<pre>';
         return $result;
+     
       }
 
  
