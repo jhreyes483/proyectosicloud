@@ -48,11 +48,11 @@ class Session{
                $_SESSION['message'] = " Bienvenido: Proveedor ";
             break;
             case 6:
-            // include_once 'clases/class.usuario.php';
-            //  $res = Usuario::verPuntosYusuario( $_SESSION['usuario']['ID_us']);
-            // $datos =$res->fetch_assoc();
-            // $_SESSION['usuario'] = $datos;
-            // $_SESSION['message'] = " Bienvenido: Cliente";
+             include_once './controladorrutas.php';
+             $objCon  =new  ControllerDoc();
+             $datos =  $objCon->verPuntosYusuario( $_SESSION['usuario']['ID_us']);
+             $_SESSION['usuario'] = $datos;
+             $_SESSION['message'] = " Bienvenido: Cliente";
                header("location: ../vista/rol/cliente/iniCliente.php");
             break; 
             default:

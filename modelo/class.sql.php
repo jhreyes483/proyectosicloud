@@ -16,6 +16,26 @@ class SQL extends Conexion{
    //============================================================================
    //CUSUARIO
 
+  public function verPuntosYusuario($id){
+    $sql = " SELECT U.ID_us  , U.nom1 , U.nom2 , U.ape1 , U.ape2 , U.fecha , U.pass , U.foto , U.correo , 
+    TD.nom_doc , 
+    RU.estado , 
+    R.ID_rol_n , R.nom_rol , 
+    P.puntos
+       FROM tipo_doc TD 
+       JOIN usuario U ON TD.ID_acronimo = U.FK_tipo_doc 
+       JOIN rol_usuario RU ON U.ID_us = RU.FK_us 
+       JOIN rol R ON FK_rol = R.ID_rol_n 
+       JOIN puntos P ON U.ID_us = P.FK_us
+       WHERE U.ID_us = '$id'"; 
+    $c = $this->db->prepare($sql);
+    $c->bindValue(":id", $id);
+    $c->execute();
+    $r = $c->fetch(PDO::FETCH_ASSOC);
+    return $r;
+ }
+
+
    // METODO INSERT USUARIO PDO MVC ---------------------------------------------------------------------
    public function InsertUsuario($a){
       $sql = "INSERT INTO usuario (ID_us, nom1, nom2, ape1, ape2, fecha, pass, foto, correo, FK_tipo_doc)

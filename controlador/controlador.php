@@ -282,6 +282,11 @@ class ControllerDoc
     {
         return $this->objModUs->verError();
     }
+    // Metodo inicio de session usuario
+    public function verPuntosYusuario($id_us){
+        return $this->objModUs->verPuntosYusuario($id_us);
+    }
+
    
     public function ver($dato, $sale=0, $float= false, $email=''){
         echo '<div style="background-color:#fbb; border:1px solid maroon;  margin:auto 5px; text-align:left;'. ($float? ' float:left;':'').' padding:7px; border-radius:7px; margin-top:10px">';
