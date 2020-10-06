@@ -134,6 +134,7 @@ class SQL extends Conexion{
 
 
       public function  selectUsuarioRol($r){
+          echo'ejecuntado select rol id'.$r; 
         $sql = "SELECT U.FK_tipo_doc, U.ID_us, U.nom1, U.nom2, U.ape1, U.ape2, U.pass, U.foto, U.correo,
            R.nom_rol,  
            R_U.estado
@@ -147,7 +148,7 @@ class SQL extends Conexion{
        // $consulta->bindValue(":id", $r);
        // $result = $consulta->execute();
        // $result = $consulta->fetchAll();
-        echo '<pre>';print_r($result); echo '<pre>';
+        echo '<pre>';print_r($result); echo '</pre>';
         return $result;
      
       }
