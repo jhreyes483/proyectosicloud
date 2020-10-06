@@ -29,7 +29,7 @@ class SQL extends Conexion{
        JOIN puntos P ON U.ID_us = P.FK_us
        WHERE U.ID_us = :id"; 
     $c = $this->db->prepare($sql);
-    $c->bindValue(":id", $id);
+    $c->bindValue(':id', $id);
     $c->execute();
     $r = $c->fetch(PDO::FETCH_ASSOC);
     return $r;
@@ -39,7 +39,7 @@ class SQL extends Conexion{
    // METODO INSERT USUARIO PDO MVC ---------------------------------------------------------------------
    public function InsertUsuario($a){
       $sql = "INSERT INTO usuario (ID_us, nom1, nom2, ape1, ape2, fecha, pass, foto, correo, FK_tipo_doc)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
       $insertar = $this->db->prepare($sql);
       foreach( $a as $i => $d   ){
       $insertar->bindValue(1, $d[0] );

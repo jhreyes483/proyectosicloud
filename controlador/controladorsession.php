@@ -49,7 +49,8 @@ class Session{
             break;
             case 6:
              include_once './controladorrutas.php';
-             $objCon  =new  ControllerDoc();
+             rutConCliente();
+             $objCon=  new  ControllerDoc();
              $datos =  $objCon->verPuntosYusuario( $_SESSION['usuario']['ID_us']);
              $_SESSION['usuario'] = $datos;
              $_SESSION['message'] = " Bienvenido: Cliente";

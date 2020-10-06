@@ -1,6 +1,8 @@
 <?php
 
 
+
+
 function rutApi(){
    include_once $_SERVER['DOCUMENT_ROOT'].'/sicloud/controlador/controlador.php';
 }
@@ -39,6 +41,10 @@ if (  !isset($cons)  ){
    define('FROMURL','http://localhost/sicloud/from');
    }
    
+   function rutConCliente(){
+      include_once './controlador/controlador.php';
+   }
+
    function rutIniFromIndex(){
       include_once '/plantillas/plantilla.php';
       include_once '/plantillas/cuerpo/inihtmlN1.php';
