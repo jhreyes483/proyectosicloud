@@ -149,5 +149,5 @@ if (isset($_SESSION['message'])) {
 </div>
 <?php
 }// lin de validar permisos
-rutFromFinN3()
+include_once '../../plantillas/cuerpo/finhtml.php';
 ?>
