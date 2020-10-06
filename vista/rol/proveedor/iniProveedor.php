@@ -159,7 +159,6 @@ if(isset($_SESSION['usuario'])){
 
 <?php
 //}
-include_once '../../plantillas/cuerpo/footerN3.php';
-include_once '../../plantillas/cuerpo/finhtml.php';
+rutFromFinN3();
 }
 ?>

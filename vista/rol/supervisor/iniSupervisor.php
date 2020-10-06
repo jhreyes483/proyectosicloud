@@ -70,13 +70,13 @@ if ($in == false) {
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="../../../global/fonts/prov1.png" alt="First slide">
+                            <img class="d-block w-100" src="../../fonts/prov1.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="../../../global/fonts/prov2.jpg" alt="tree slide">
+                            <img class="d-block w-100" src="../../fonts/prov2.jpg" alt="tree slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="../../../global/fonts/prov3.png" alt="Second slide">
+                            <img class="d-block w-100" src="../../fonts/prov3.png" alt="Second slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -126,9 +126,7 @@ if ($in == false) {
           </div>
           </div>
 
-          <?php
-        }
-        include_once '../../plantillas/cuerpo/finhtml.php';
-        include_once '../../plantillas/cuerpo/footerN3.php';
-
-          ?>
+<?php
+}
+rutFromFinN3();
+?>

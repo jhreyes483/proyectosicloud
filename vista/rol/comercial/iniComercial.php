@@ -123,7 +123,6 @@ if ($in == false) {
     </div>
 <?php
 //} //fin de validar permisos
-include_once '../../plantillas/cuerpo/footerN3.php';
-include_once '../../plantillas/cuerpo/finhtml.php';
+rutFromFinN3();
 }
 ?>

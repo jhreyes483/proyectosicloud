@@ -24,9 +24,6 @@ if ($in == false) {
 } else {
 
     //--------------------------------------------------------------------------
-//include_once '../../plantillas/plantilla.php';
-//include_once '../../plantillas/cuerpo/inihtmlN3.php';
-//include_once '../../plantillas/nav/navN3.php';
 if(isset($_SESSION['usuario'])){
     print_r($_SESSION['usuario']);
     $usuario = $_SESSION['usuario'];
@@ -38,8 +35,8 @@ cardtitulo("Modulo Administrativo");
 if (isset($_SESSION['message'])) {
 ?>
   <!-- alerta boostrap -->
-  <div class=" col-md-4 text-center mx-auto alert alert-<?php echo $_SESSION['color']   ?> alert-dismissible fade show" role="alert">
-    <?php echo  $_SESSION['message']  ?>
+  <div class=" col-md-4 text-center mx-auto alert alert-<?= $_SESSION['color']   ?> alert-dismissible fade show" role="alert">
+    <?=  $_SESSION['message']  ?>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -47,7 +44,7 @@ if (isset($_SESSION['message'])) {
 
  <h5 class = "mx-auto text-center text-success "><?php  if(isset($_SESSION['usuario'])){ echo "Hola: ".$_SESSION['usuario']['nom1']; ?>
 
-<img src="/jpg;base64," <?php  echo base64_encode($_SESSION['usuario']['foto']); ?> />
+<img src="/jpg;base64," <?= base64_encode($_SESSION['usuario']['foto']); ?> />
 <?php
 } ?></h5>
 
@@ -149,5 +146,5 @@ if (isset($_SESSION['message'])) {
 </div>
 <?php
 }// lin de validar permisos
-include_once '../../plantillas/cuerpo/finhtml.php';
+rutFromFinN3()
 ?>

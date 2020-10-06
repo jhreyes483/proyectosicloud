@@ -36,13 +36,13 @@ cardAviso();
                 <li data-target="#carousel-1" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img class="d-block w-100" src="'../../fonts/slideprod0.jpg" alt="First slide" >
-                </div>
-                <div class="carousel-item">
-                <img class="d-block w-100" src="../../fonts/slideprod1.jpg" alt="Second slide" >
-                </div>
-            </div>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="../../fonts/slideprod0.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../../fonts/slideprod1.jpg" alt="Second slide">
+                        </div>
+                    </div>
             <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -80,5 +80,5 @@ cardAviso();
         </div>
     </div>
 <?php
-rutFromFinN3()
+rutFromFinN3();
 ?>
