@@ -27,7 +27,7 @@ class SQL extends Conexion{
        JOIN rol_usuario RU ON U.ID_us = RU.FK_us 
        JOIN rol R ON FK_rol = R.ID_rol_n 
        JOIN puntos P ON U.ID_us = P.FK_us
-       WHERE U.ID_us = '$id'"; 
+       WHERE U.ID_us = :id"; 
     $c = $this->db->prepare($sql);
     $c->bindValue(":id", $id);
     $c->execute();
