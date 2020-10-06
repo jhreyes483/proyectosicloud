@@ -1,11 +1,8 @@
 
 <?php 
 //  rol/admin/iniAdmin.php
-include_once '../../../global/plantillas/cuerpo/inihtmlN3.php';
-include_once '../../../global/plantillas/nav/navN3.php';
-include_once '../../../global/plantillas/plantilla.php';
-include_once '../../../controlador/ControladorSession.php';
-
+include_once '../../../controlador/controladorrutas.php';
+rutFromIniN3();
 ?>
 <div class="my-4">
 <?php
@@ -110,6 +107,6 @@ cardAviso();
 
 
 <?php
-include_once '../../../global/plantillas/cuerpo/footerN3.php';
-include_once '../../../global/plantillas/cuerpo/finhtml.php';
+
+rutFromFinN3()
 ?>

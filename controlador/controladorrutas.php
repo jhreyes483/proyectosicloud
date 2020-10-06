@@ -96,4 +96,9 @@ if (  !isset($cons)  ){
       include_once '../../../controlador/controladorsession.php';
    }
 
+   function rutFromFinN3(){ 
+      include_once '../../vistas/plantillas/cuerpo/footerN3.php';
+      include_once '../../vistas/plantillas/cuerpo/finhtml.php';
+   }
+
 ?>
