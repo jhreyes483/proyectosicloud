@@ -2,8 +2,6 @@
 include_once '../controlador/controladorrutas.php';
 rutFromIni();
 $mensaje = "";
-
-echo 'controlador carrito';
 // captura los datos que vienen por pos, desemcrita y almacena en varibles
 if (isset($_POST['btnCatalogo'])) {
     switch ($_POST['btnCatalogo']) {
@@ -14,20 +12,14 @@ if (isset($_POST['btnCatalogo'])) {
             } else {
                 $mensaje = "Upss.. Id incorrecto";
             }
-
-
             if (is_string(openssl_decrypt($_POST['nombre'], COD, KEY))) {
                 $NOMBRE = openssl_decrypt($_POST['nombre'], COD, KEY);
                 $mensajeNombre = "OK ID" . $NOMBRE;
             } else {
                 $mensaje = "Upss.. Id incorrecto";
             }
-
-
             $CANTIDAD = $_POST['cantidad1'];
             $mensajeCantidad = "OK ID" . $CANTIDAD;
-
-
 
             if (is_numeric(openssl_decrypt($_POST['precio'], COD, KEY))) {
                 $PRECIO = openssl_decrypt($_POST['precio'], COD, KEY);
@@ -43,8 +35,6 @@ if (isset($_POST['btnCatalogo'])) {
                 $mensajePrecio = "Upss.. Id incorrecto";
             }
 
-
-
             if (!isset($_SESSION['CARRITO'])) {
                 // ALMACENAR EL VALOR DE LA VARIBLE EN EL ARREGLO $porductos
                 $producto =[
@@ -53,7 +43,6 @@ if (isset($_POST['btnCatalogo'])) {
                     'CANTIDAD' => $CANTIDAD,
                     'PRECIO' => $PRECIO,
                     'IMG' => $IMG
-
                 ];
 
                 // Almacena los datos en session
@@ -62,8 +51,6 @@ if (isset($_POST['btnCatalogo'])) {
                 $_SESSION['color'] = 'success';
             } // fin de isset carrito "primer producto"
             else {
-
-
                 //--------------------------------------------------------------------------
                 //Valida si el producto ya existe en el carrito
                 $idProducto = array_column($_SESSION['CARRITO'], "ID"); // captura todos los id del arreglo
@@ -72,10 +59,7 @@ if (isset($_POST['btnCatalogo'])) {
                     $_SESSION['color'] = 'danger';
                     break;
                 }
-
                 //-------------------------------------------------------------------------
-
-
                 $numeroProductos = count($_SESSION['CARRITO']);
                 //Recupera los datos que llegaron por post y que se desencriptaron "si ya existe el carrito"
                 $producto = array(
@@ -91,10 +75,7 @@ if (isset($_POST['btnCatalogo'])) {
                 $_SESSION['color'] = 'success';
             }
             $mensaje = print_r($_SESSION, true);
-
-
-
-            break;
+        break;
         case 'Eliminar':
             // EVALUACION SI LA ACCION ES ELIMINAR EL PRODUCTO DEL CARRITO
             openssl_decrypt($_POST['id'], COD, KEY);
@@ -108,8 +89,6 @@ if (isset($_POST['btnCatalogo'])) {
                     $_SESSION['color'] = 'danger';
                 endif;
             }
-            break;
+        break;
     } // Fin de switch
-
-
 }
