@@ -133,24 +133,22 @@ class SQL extends Conexion{
       }
 
 
-      public function  selectUsuarioRol($r){
-          echo'ejecuntado select rol id'.$r; 
+      public function  selectUsuarioRol($id){
+        echo'ejecuntado select rol id'.$id; 
         $sql = "SELECT U.FK_tipo_doc, U.ID_us, U.nom1, U.nom2, U.ape1, U.ape2, U.pass, U.foto, U.correo,
-           R.nom_rol,  
-           R_U.estado
-           FROM sicloud.usuario U 
-           JOIN  rol_usuario R_U ON R_U.FK_us = U.ID_us
-           JOIN sicloud.rol  R ON R_U.FK_rol = R.ID_rol_n
-           WHERE R.ID_rol_n  = ? 
-           ORDER BY u.nom1 asc";
-        $consulta= $this->db->prepare($sql);
-        $consulta->execute([$r]);
-       // $consulta->bindValue(":id", $r);
-       // $result = $consulta->execute();
-        $result = $consulta->fetchAll();
-        echo '<pre>';print_r($result); echo '</pre>';
-        return $result;
-     
+        R.nom_rol,  
+        R_U.estado
+        FROM sicloud.usuario U 
+        JOIN  rol_usuario R_U ON R_U.FK_us = U.ID_us
+        JOIN sicloud.rol  R ON R_U.FK_rol = R.ID_rol_n
+        WHERE R.ID_rol_n = :id
+         ";
+        $c = $this->db->prepare($sql);
+        $c->bindValue(":id", $id);
+        $c->execute();
+        $r = $c->fetchAll();
+        echo '<pre>';print_r($r); echo '</pre>';
+        return $r;
       }
 
  
