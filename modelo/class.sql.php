@@ -152,13 +152,13 @@ class SQL extends Conexion{
  */
 
 public function  selectUsuarioRol($id){
-    $sql = "SELECT U.FK_tipo_doc, U.ID_us, U.nom1, U.nom2, U.ape1, U.ape2, U.pass, U.foto, U.correo,
-    R.nom_rol,  
+    $sql = "SELECT distinct U.FK_tipo_doc, U.ID_us, U.nom1, U.nom2, U.ape1, U.ape2, U.pass, U.foto, U.correo, 
+    R.nom_rol,  R.nom_rol,
     R_U.estado
-    FROM sicloud.usuario U 
+    FROM usuario U 
     JOIN  rol_usuario R_U ON R_U.FK_us = U.ID_us
-    JOIN sicloud.rol  R ON R_U.FK_rol = R.ID_rol_n
-    WHERE R.ID_rol_n = :id
+    JOIN rol  R ON R_U.FK_rol = R.ID_rol_n 
+    WHERE R.ID_rol_n  = :id
      ";
     $c = $this->db->prepare($sql);
     $c->bindValue(":id", $id);
