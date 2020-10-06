@@ -144,10 +144,10 @@ class SQL extends Conexion{
            WHERE R.ID_rol_n  = ? 
            ORDER BY u.nom1 asc";
         $consulta= $this->db->prepare($sql);
-        $result =  $consulta->execute([$r]);
+        $consulta->execute([$r]);
        // $consulta->bindValue(":id", $r);
        // $result = $consulta->execute();
-       // $result = $consulta->fetchAll();
+        $result = $consulta->fetchAll();
         echo '<pre>';print_r($result); echo '</pre>';
         return $result;
      
