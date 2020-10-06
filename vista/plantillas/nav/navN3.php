@@ -16,7 +16,7 @@ include_once '../../../controlador/controladorsession.php';
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto mx-auto">
       <li class="nav-item active">
-        <a class="nav-link lead px-4 my-3 " href="../../index.php">INICIO<span class="sr-only">(current)</span></a>
+        <a class="nav-link lead px-4 my-3 " href="../../../index.php">INICIO<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle lead px-4 my-3" href="../../Vision-home.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -27,7 +27,7 @@ include_once '../../../controlador/controladorsession.php';
           <a class="dropdown-item" href="../../CU000-misionyvision.php">MISION Y VISION</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link lead px-4 my-3" id="catalogo"; href="../../metodos/get.php?ops=1">CATALOGO <span class="sr-only">(current)</span></a>
+        <a class="nav-link lead px-4 my-3" id="catalogo"; href="../../catalogo.php?ops=1">CATALOGO <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link lead px-4 my-3" href="../../Promociones.php">PROMOCIONES<span class="sr-only">(current)</span></a>
