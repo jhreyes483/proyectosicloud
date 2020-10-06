@@ -158,6 +158,7 @@ foreach ($d as $i => $d) {
                 $tabla = true;
                 $id = $_POST['rol'];
                 $datos = $objCon->selectUsuarioRol($id);
+                $objCon->ver($datos);
             default:
                 setMessage();
             break;
