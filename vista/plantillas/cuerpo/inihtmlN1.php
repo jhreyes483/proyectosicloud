@@ -16,9 +16,7 @@
     <link href="estilos/css/bootstrap.css"  rel="stylesheet" >
     <link rel="stylesheet" href="estilos/css/jav.css">
     <link rel="stylesheet"href="estilos/css/animate.css">
-    <?php
-    echo 'hola soy init 1';
-    ?>
+  
 
     <!--  -->
     <title>Sicloud</title>
