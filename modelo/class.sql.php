@@ -147,7 +147,11 @@ class SQL extends Conexion{
         $c->bindValue(":id", $id);
         $c->execute();
         $r = $c->fetchAll();
-        echo '<pre>';print_r($r); echo '</pre>'; die('FIN'.$r);
+        foreach($r as $d){
+            echo $d[0];
+        }
+
+        echo '<pre>';print_r($r); echo '</pre>'; 
         return $r;
       }
 
