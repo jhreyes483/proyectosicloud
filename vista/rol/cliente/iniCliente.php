@@ -23,26 +23,9 @@ if (isset($_SESSION['message'])) {
  <h5 class = "mx-auto tex-cennter text-succes "><?php  if(isset($_SESSION['usuario'])){ echo "Hola: ".$_SESSION['usuario']['nom1']; } ?></h5>
 
 <?php $_SESSION['message'] == false; }
-
-
-
-
-
-
-
-
 cardAviso();
-
-
-
-
 ?>
 
-
-          
-          
-
-      
             <hr class="border" />
         </div>
         <div class="col-xs-11 col-sm-11 col-md-11 mx-auto">
@@ -54,10 +37,10 @@ cardAviso();
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img class="d-block w-100" src="../../../global/fonts/slideprod0.jpg" alt="First slide" >
+                <img class="d-block w-100" src="'../../fonts/slideprod0.jpg" alt="First slide" >
                 </div>
                 <div class="carousel-item">
-                <img class="d-block w-100" src="../../../global/fonts/slideprod1.jpg" alt="Second slide" >
+                <img class="d-block w-100" src="../../fonts/slideprod1.jpg" alt="Second slide" >
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -72,8 +55,6 @@ cardAviso();
         </div>
     </div>
 </div>
-
-
     <div class="col-md-12 mt-5">
         <div class="row">
             <div class="col-xs-11 col-sm-11 col-md-11 mx-auto" >
@@ -93,20 +74,11 @@ cardAviso();
         </div>
     </div>
 
-
-
-
-
     <div class="container">
         <div class="map-responsive my-4">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.92411032952!2d-74.20988058573687!3d4.607607443741915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e22e1a69dad%3A0x37ca3bcc91bfba65!2sCl.%2078%20Sur%20%2378-71%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1590105646415!5m2!1ses!2sco" width="900" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </div>
-
-
-
-
 <?php
-
 rutFromFinN3()
 ?>
