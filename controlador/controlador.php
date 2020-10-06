@@ -183,17 +183,17 @@ class ControllerDoc
     // U004-crearproductos.php
     public function insertarProducto($a)
     {
-       return $this->objModProd->insertarProducto($a);
+       return $this->objMod->insertarProducto($a);
     }
     public function verProductosGrafica()
     {
-       return $this->objModProd->verProductosGrafica();
+       return $this->objModUs->verProductosGrafica();
     }
     public function ConteoProductosT(){
-       return $this->objModProd->ConteoProductosT();
+       return $this->objModUs->ConteoProductosT();
     }
     public function EliminarProducto($id){
-      return $this->objModProd->EliminarProducto($id);
+      return $this->objModUs->EliminarProducto($id);
     }
     // Catalogo
     public function buscarPorNombreProducto($id)
