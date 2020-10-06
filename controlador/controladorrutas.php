@@ -97,8 +97,8 @@ if (  !isset($cons)  ){
    }
 
    function rutFromFinN3(){ 
-      include_once '../../vistas/plantillas/cuerpo/footerN3.php';
-      include_once '../../vistas/plantillas/cuerpo/finhtml.php';
+      include_once '../../plantillas/cuerpo/finhtml.php';
+      include_once '../../plantillas/cuerpo/footerN3.php';
    }
 
 ?>
