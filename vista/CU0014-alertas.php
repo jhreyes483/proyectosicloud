@@ -302,6 +302,8 @@ if(isset($_GET['stockGeneral'])){
             </div>
         </div>
     </div>
+</div>
+
         
 <?php
 }// fin de permisos por rol         
