@@ -132,7 +132,7 @@ class SQL extends Conexion{
          }
       }
 
-
+/*
       public function  selectUsuarioRol($r){
         $sql = "SELECT U.FK_tipo_doc, U.ID_us, U.nom1, U.nom2, U.ape1, U.ape2, U.pass, U.foto, U.correo,
            R.nom_rol,  
@@ -149,7 +149,23 @@ class SQL extends Conexion{
         return $result;
       }
 
- 
+ */
+
+public function  selectUsuarioRol($id){
+    $sql = "SELECT distinct U.FK_tipo_doc, U.ID_us, U.nom1, U.nom2, U.ape1, U.ape2, U.pass, U.foto, U.correo, 
+    R.nom_rol,  R.nom_rol,
+    R_U.estado
+    FROM usuario U 
+    JOIN  rol_usuario R_U ON R_U.FK_us = U.ID_us
+    JOIN rol  R ON R_U.FK_rol = R.ID_rol_n 
+    WHERE ID_us = :id
+     ";
+    $c = $this->db->prepare($sql);
+    $c->bindValue(":id", $id);
+    $c->execute();
+    $r = $c->fetchAll();
+return $r;
+}
 
       public function conteoUsuariosActivos(){
          $sql = "SELECT count(*) AS usuariosActivos 
