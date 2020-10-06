@@ -140,12 +140,13 @@ class SQL extends Conexion{
            FROM sicloud.usuario U 
            JOIN  rol_usuario R_U ON R_U.FK_us = U.ID_us
            JOIN sicloud.rol  R ON R_U.FK_rol = R.ID_rol_n
-           WHERE R.ID_rol_n  = :id
+           WHERE R.ID_rol_n  = ? 
            ORDER BY u.nom1 asc";
         $consulta= $this->db->prepare($sql);
-        $consulta->bindValue(":id", $r);
-        $result = $consulta->execute();
-        $result = $consulta->fetchAll();
+        $result =  $consulta->execute([$r]);
+       // $consulta->bindValue(":id", $r);
+       // $result = $consulta->execute();
+       // $result = $consulta->fetchAll();
         echo '<pre>';print_r($result); echo '<pre>';
         return $result;
      
