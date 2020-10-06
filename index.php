@@ -137,8 +137,9 @@ rutIniFromIndexRaiz();
     </div>
 </div>
 <script src="./vista/estilos/js/funcions.js"></script>
-<script src="./vista/estilos/js/login.js"></script>
+
 <?php
 rutFinFooterFromRaiz();
 ?>
+<script src="./vista/estilos/js/login.js"></script>
 <!--    IMPORTANTE VERIFICAR CONDIGO JQUERY -->

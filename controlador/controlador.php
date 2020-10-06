@@ -2,8 +2,6 @@
 <?php
 //session_destroy();
 include_once '../modelo/class.sql.php';
-
-
 /*
 include_once '../modelo/class.documento.php';
 
@@ -23,11 +21,8 @@ class ControllerDoc
 {
     public $objModUs;
 
-
-
     public function __construct()
     {
-
         $this->objModUs   =  SQL::ningunDato();
 
         /*
@@ -137,7 +132,6 @@ class ControllerDoc
     {
         return $this->objModUs->desactivarCuenta($id);
     }
-
     // Metodos de categoria 
     //"CU004-crearProductos.php"
     public function verCategorias()
@@ -157,8 +151,6 @@ class ControllerDoc
     {
         return $this->objModUs->verPromociones();
     }
-
-
     //Medida     
     public function verMedida()
     {
@@ -168,15 +160,10 @@ class ControllerDoc
     {
       //  return $this->objModMed->verDatoPorId($id);
     }
-
-
     public function verProveedor()
     {
        return $this->objModUs->verProveedor();
     }
-
-
-
     public function verProductos()
     { // CU003-ingresoproducto.php
         return $this->objModUs->verProductos();
@@ -208,9 +195,6 @@ class ControllerDoc
     public function EliminarProducto($id){
       return $this->objModProd->EliminarProducto($id);
     }
-
-
-
     // Catalogo
     public function buscarPorNombreProducto($id)
     {
@@ -221,16 +205,11 @@ class ControllerDoc
         return $this->objModUs->verPorCategoria($id);
     }
 
-
-
-
     //CU006-acomulaciondepuntos.php
     public function verPuntosUs()
     {
         return $this->objModUs->verPuntosUs();
     }
-
-
 
     //metodos de factura
     public function usuariosComprasRealizadas()
@@ -250,16 +229,11 @@ class ControllerDoc
         return $this->objModUs->verIntervaloFecha($f1, $f2);
     }
 
-
-
-
     //modificaion db
     public function verJoinModificacionesDB()
     {
         return $this->objModUs->verJoinModificacionesDB();
     }
-
-
 
     //Metodos de Rol
     public function verRolId($id)
@@ -270,11 +244,6 @@ class ControllerDoc
     {
         return $this->objModUs->verRol();
     }
-
-
-
-
-
 
     //metodos de ciudad
     public function verCiudad()
@@ -308,9 +277,6 @@ class ControllerDoc
     public function eliminarTelefono($id){
         return $this->objModUs->eliminarTelefono($id);
     }
-
- 
-
     //metodos de error
     public function verError()
     {
