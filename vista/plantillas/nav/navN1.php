@@ -125,7 +125,7 @@ include_once '../controlador/controlador.php';
                           echo $_SESSION['usuario']['nom_rol'];
                         } ?></strong></em>
           </a>
-          <a class="dropdown-item" href="misDatos.php">
+          <a class="dropdown-item" href="misdatos.php">
             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
             Mis datos
           </a>
