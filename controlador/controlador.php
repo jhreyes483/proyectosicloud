@@ -228,6 +228,15 @@ class ControllerDoc
     {
         return $this->objModUs->verIntervaloFecha($f1, $f2);
     }
+    public function verDia(){
+        return $this->objModus->verDia();
+    }
+    public function verSemana(){
+        return $this->verSemana();
+    }
+    public function verMes(){
+        return $this->verMes();
+    }
 
     //modificaion db
     public function verJoinModificacionesDB()

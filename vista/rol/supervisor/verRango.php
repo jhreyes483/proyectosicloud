@@ -191,17 +191,18 @@ $r = 0;
 
                 <?php
 
-
-                $datos = Factura::verDia();
-                while ($row = $datos->fetch_array()) {
+                $objd = new ControllerDoc();
+                $datos = $objd->verDia();
+                foreach($datos as $i => $row){
+                //while ($row = $datos->fetch_array()) {
                 ?>
 
 
                     <tbody>
                         <tr>
-                            <td> <?php echo $row['cantidad']  ?></td>
-                            <td> <?php echo $row['total']  ?></td>
-                            <td> <?php echo $row['dia']  ?></td>
+                            <td> <?= $row['cantidad']  ?></td>
+                            <td> <?=  $row['total']  ?></td>
+                            <td> <?= $row['dia']  ?></td>
                         </tr>
                     </tbody>
 
@@ -237,17 +238,18 @@ $r = 0;
 
             <?php
 
-
-                $datos = Factura::verSemana();
-                while ($row = $datos->fetch_array()) {
+                $objs = new ControllerDoc();
+                $datos = $objs->verSemana();
+                foreach ($datos as $i => $row){
+                //while ($row = $datos->fetch_array()) {
             ?>
 
 
                 <tbody>
                     <tr>
-                        <td> <?php echo $row['cantidad']  ?></td>
-                        <td> <?php echo $row['Total']  ?></td>
-                        <td> <?php echo $row['dia_final_semana']  ?></td>
+                        <td> <?= $row['cantidad']  ?></td>
+                        <td> <?= $row['Total']  ?></td>
+                        <td> <?= $row['dia_final_semana']  ?></td>
                     </tr>
                 </tbody>
 
@@ -289,17 +291,18 @@ $r = 0;
 
                 <?php
 
-
-                $datos = Factura::verMes();
-                while ($row = $datos->fetch_array()) {
+                $objm = new ControllerDoc();
+                $datos = $objm->verMes();
+                foreach($datos as $i => $row){
+                //while ($row = $datos->fetch_array()) {
                 ?>
 
 
                     <tbody>
                         <tr>
-                            <td> <?php echo $row['cantidad']  ?></td>
-                            <td> <?php echo $row['Total']  ?></td>
-                            <td> <?php echo $row['dia_final_mes']  ?></td>
+                            <td> <?= $row['cantidad']  ?></td>
+                            <td> <?= $row['Total']  ?></td>
+                            <td> <?= $row['dia_final_mes']  ?></td>
                         </tr>
                     </tbody>
                 <?php   } //while
