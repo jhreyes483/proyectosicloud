@@ -93,6 +93,9 @@ class ControllerDoc
     {
         return $this->objModUs->readUsuarioModel('vendedor');
     }
+    public function readUsuarioModel(){
+        return $this->objModUs->readUsuarioModel();
+    }
     public function eliminarUsuario($id_get)
     {
         return  $this->objModUs->eliminarUsuario($id_get);

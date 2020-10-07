@@ -3,7 +3,6 @@
 include_once 'plantillas/plantilla.php';
 include_once 'plantillas/nav/navgeneral.php';
 include_once 'plantillas/cuerpo/inihtmlN1.php';
-include_once '../modelo/class.sql.php';
 include_once '../controlador/controladorsession.php';
 include_once '..controlador/controlador.php';
 
@@ -58,7 +57,7 @@ window.location = "../controlador/get.php?accion=eliminarUsuario&&id="+ id_to_de
                         <th scope="col">Accion</th>
                         <?php
                         $objus = new ControllerDoc();
-                        $datos = $objus-> readUsuariosController();
+                        $datos = $objus-> readUsuarioModel();
                         
 
                             if(isset($datos)){
