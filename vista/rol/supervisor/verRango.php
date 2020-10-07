@@ -1,7 +1,7 @@
 <?php
 
 
-include_once '../../plantillas/plantilla.php';
+//include_once '../../plantillas/plantilla.php';
 
 /*
 include_once '../../../modelo/class.categoria.php';
@@ -10,9 +10,13 @@ include_once '../../../modelo/class.conexion.php';
 include_once '../../../modelo/class.factura.php';
 
 */
+/*
 include_once '../../plantillas/cuerpo/inihtmlN3.php';
 include_once '../../plantillas/nav/navN3.php';
 include_once '../../../controlador/ControladorSession.php';
+*/
+include_once '../controlador/controladorrutas.php';
+rutFromIniN3();
 cardtitulo(" Informes de ventas");
 
 if (isset($_SESSION['message'])) {
