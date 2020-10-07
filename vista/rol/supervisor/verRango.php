@@ -38,12 +38,13 @@ group by dia";
      $consulta = $this->db->prepare($sql);
      $consulta->execute();
      $result = $consulta->fetchAll();
-    $col = $result->num_rows;
+    //$dat = $c->query($sql);
+    //$col = $dat->num_rows;
     // numero de columnas de dia
 
 $r = 0;
    
-  $d = $dat->fetch_assoc();
+  $d = $result->fetchAll();
   $con = $d['total'] + $d['total'];
   echo $con;
 
