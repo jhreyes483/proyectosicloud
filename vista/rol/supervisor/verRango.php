@@ -15,7 +15,7 @@ include_once '../../plantillas/cuerpo/inihtmlN3.php';
 include_once '../../plantillas/nav/navN3.php';
 include_once '../../../controlador/ControladorSession.php';
 */
-include_once '../controlador/controladorrutas.php';
+include_once '../../controlador/controladorrutas.php';
 rutFromIniN3();
 cardtitulo(" Informes de ventas");
 
