@@ -37,8 +37,10 @@ join sicloud.factura f on f.ID_factura = detf.FK_det_factura
 group by dia";
      $consulta = $this->db->prepare($sql);
      $consulta->execute();
-     $result = $consulta->fetchAll(); 
-    
+     $result = $consulta->fetchAll();
+     return $result;  
+    $dat = $c->query($sql);
+    $col = $dat->num_rows;
     // numero de columnas de dia
 
 $r = 0;
