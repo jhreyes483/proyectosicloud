@@ -38,9 +38,7 @@ group by dia";
      $consulta = $this->db->prepare($sql);
      $consulta->execute();
      $result = $consulta->fetchAll();
-     return $result;  
-    $dat = $c->query($sql);
-    $col = $dat->num_rows;
+    $col = $result->num_rows;
     // numero de columnas de dia
 
 $r = 0;
