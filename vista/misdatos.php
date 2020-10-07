@@ -121,7 +121,7 @@ if (isset($_SESSION['message'])) {
                     </form>
 
                     <div class=" col-md-3  mx-auto">
-                        <a class="btn-block btn btn-dark" href="forgot_password/index.html">Cambio de cotraseña</a>
+                        <a class="btn-block btn btn-dark" href="cambioContraseña.php">Cambio de cotraseña</a>
                     </div>
                     <div class=" col-md-3  mx-auto">
                         <a class="btn-block btn btn-dark" href="formDatosPersonalesAjax.php">Datos personales</a>
