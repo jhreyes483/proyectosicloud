@@ -1,7 +1,7 @@
 <?php
 
 
-//include_once '../../plantillas/plantilla.php';
+include_once '../../plantillas/plantilla.php';
 
 /*
 include_once '../../../modelo/class.categoria.php';
@@ -10,13 +10,10 @@ include_once '../../../modelo/class.conexion.php';
 include_once '../../../modelo/class.factura.php';
 
 */
-/*
 include_once '../../plantillas/cuerpo/inihtmlN3.php';
 include_once '../../plantillas/nav/navN3.php';
 include_once '../../../controlador/ControladorSession.php';
-*/
-include_once '../../controlador/controladorrutas.php';
-rutFromIni();
+include_once '../../../controlador/controlador.php';
 cardtitulo(" Informes de ventas");
 
 if (isset($_SESSION['message'])) {
@@ -33,14 +30,15 @@ if (isset($_SESSION['message'])) {
     setMessage();
 }
 
-    include_once '../../../modelo/class.conexion.php';
-    $c = new Conexion;
+    
     $sql = "SELECT cantidad, sum(f.total) as total, day(f.fecha) as dia
 from sicloud.det_factura detf
 join sicloud.factura f on f.ID_factura = detf.FK_det_factura
 group by dia";
-    $dat = $c->query($sql);
-    $col = $dat->num_rows;
+     $consulta = $this->db->prepare($sql);
+     $consulta->execute();
+     $result = $consulta->fetchAll(); 
+    
     // numero de columnas de dia
 
 $r = 0;
