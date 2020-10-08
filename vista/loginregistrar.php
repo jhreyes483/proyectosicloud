@@ -1,4 +1,9 @@
+<?php
+include_once '../controlador/controladorsession';
+include_once '../controlador/controlador.php';
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,21 +54,46 @@
                         </fieldset>
                         <div class="forms_buttons">
                             <a class="forms_buttons-forgot" href="forgot_password/dist/index.html">Olvidó la contraseña?</a>
-                            <input type="submit" value="Enviar" class="forms_buttons-action">
+                            <input type="submit" name="btnLogin" value="Enviar" class="forms_buttons-action">
                         </div>
                     </form>
                 </div>
                 <div class="user_forms-signup">
                     <img width="250px"src="fonts/registrarh.PNG">
                     <div class="forms_buttons">
-                        <a href="CU002-registrodeUsuario.php">
+                        <a href="http://localhost/sicloud/vista/CU002-registrodeUsuario.php">
                             <input type="submit" value="Registrarse" class="forms_buttons-action">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+<?php
+if (isset($_POST['btnLogin'])) {
+    $ID_us = ($_POST['nDoc']);
+    $pass = ($_POST['pass']);
+    $doc = $_POST['tDoc'];
+    $obju = new ControllerDoc();
+    $res = $obju->loginUsuarioController($ID_us,  $pass, $doc);
+ 
+    if ($res->num_rows == 0) {
+        $_SESSION['message'] = "Usuario o contraseña incorrecta";
+        $_SESSION['color'] = "danger";
+        header("location: ../index.php");
+    } else {
+        $_SESSION['message'] = "Bienvenido...";
+        $_SESSION['color'] = "success";
+        $datos = $res->fetch_assoc();
+        $_SESSION['usuario'] = $datos;
+ 
+ 
+         
+            header("location: ../index.php"); // el rol de usuario es cliente no requiere aprabacion ya que no modifica el sistema
+ 
+    }
+    }
 
+?>
     </section>
 
     <!-- partial -->
