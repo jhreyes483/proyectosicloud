@@ -85,7 +85,7 @@ window.location = "../controlador/api.php?accion=eliminarUsuario&&id="+ id_to_de
                     <td>
                         <a href="EditarUsuario.php?ID_us=<?= $d[0] ?> " class="btn btn-circle btn-secondary">
                         <i class="fas fa-search fa-sm"></i>
-                        <a href="../controlador/api.php?apicall=elimianarUsuario&&id=<?= $_GET[$d[0]] ?> "  class="btn btn-circle btn-danger">
+                        <a href="../controlador/api.php?apicall=elimianarUsuario&&id=<?= $d[0] ?> "  class="btn btn-circle btn-danger">
                                 <i class="far fa-trash-alt"></i>
                             </a>
                     </td>
