@@ -3,9 +3,9 @@
 include_once 'plantillas/plantilla.php';
 include_once 'plantillas/nav/navgeneral.php';
 include_once 'plantillas/cuerpo/inihtmlN1.php';
+include_once '../modelo/class.sql.php';
 include_once '../controlador/controladorsession.php';
-include_once '..controlador/controlador.php';
-
+include_once '../controlador/controlador.php';
 
 ?>
 
@@ -56,8 +56,9 @@ window.location = "../controlador/get.php?accion=eliminarUsuario&&id="+ id_to_de
                         <th scope="col">tipo documento</th>
                         <th scope="col">Accion</th>
                         <?php
-                        $objus = new ControllerDoc();
-                        $datos = $objus-> readUsuarioModel();
+
+                        $objus= new ControllerDoc();
+                        $datos = $objus-> readUsuariosController();
                         
 
                             if(isset($datos)){
@@ -82,9 +83,9 @@ window.location = "../controlador/get.php?accion=eliminarUsuario&&id="+ id_to_de
                     <td><?= $d[8] ?></td>
                     <td><?= $d[9] ?></td>
                     <td>
-                        <a href="EditarUsuario.php?ID_us=<?= $d[0] ?> " class="btn btn-circle btn-secondary">
+                        <a href="http://localhost/sicloud/vista/EditarUsuario.php?ID_us=<?= $d[0] ?> " class="btn btn-circle btn-secondary">
                         <i class="fas fa-search fa-sm"></i>
-                        <a href="../controlador/api.php?apicall=elimianarUsuario&&id=<?= $d[0] ?> "  class="btn btn-circle btn-danger">
+                        <a href="http://localhost/sicloud/controlador/api.php?apicall=elimianarUsuario&&id=<?= $d[0] ?> "  class="btn btn-circle btn-danger">
                                 <i class="far fa-trash-alt"></i>
                             </a>
                     </td>
