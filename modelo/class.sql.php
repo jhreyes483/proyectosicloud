@@ -118,7 +118,7 @@ class SQL extends Conexion{
       $consulta2 =$this->db->prepare($sql1);
       $rest1 = $consulta2->execute();
       if ($rest1) {
-         $sql2 = "DELETE FROM sicloud.usuario WHERE  ID_us = :id ";
+         $sql2 = "DELETE FROM usuario WHERE  ID_us = :id ";
          $consulta3=$this->db->prepare($sql2); 
          $consulta3->bindValue(":id", $id_get);
          $rest2=$consulta3->execute();

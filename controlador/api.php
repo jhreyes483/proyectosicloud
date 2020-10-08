@@ -82,8 +82,6 @@ if(isset($_GET['apicall'])){
       case 'elimianarUsuario';
         // $db = new ControllerDoc();
          $bool =   $db->eliminarUsuario($_GET['id'] );
-         echo '<pre>'; print_r($_GET['id']); echo '<pre>'; 
-         die('fin');
          if( $bool ){
            $response['error'] = false;
            $response['message'] = 'Elimino usuario';
