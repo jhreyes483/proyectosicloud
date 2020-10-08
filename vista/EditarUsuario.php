@@ -32,7 +32,7 @@ cardtitulo("Actualizar Usuario");
     <div class="row">
         <div class="col-md-10 card card-body mx-auto">
             <h5></h5>
-            <form class="form-group" action="http://localhost/sicloud/controlador/api.php?apicall=actualizarUsuario&&id=<?= $_GET['ID_us'] ?>" method="POST" enctype="multipart/form-data">
+            <form class="form-group" action="../controlador/api.php?apicall=actualizarUsuario&&id=<?= $_GET['ID_us'] ?>" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card text-center card-title">
