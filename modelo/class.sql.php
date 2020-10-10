@@ -1448,7 +1448,7 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
           /*  if($bool){
                return true;
             }else{
-         /*      return $a;
+         */      return $a;
             }
         }
    }
