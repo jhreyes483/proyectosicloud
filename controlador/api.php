@@ -52,7 +52,8 @@ if(isset($_GET['apicall'])){
          $_POST['pass'],
          $_POST['foto'],
          $_POST['correo'],
-         $_POST['FK_tipo_doc']
+         $_POST['FK_tipo_doc'],
+         $_POST['FK_rol'] 
       );  
       if($result){
          //esto significa que no hay ningun error

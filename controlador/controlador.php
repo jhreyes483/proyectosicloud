@@ -63,7 +63,8 @@ class ControllerDoc
         $pass,
         $foto,
         $correo,
-        $FK_tipo_doc
+        $FK_tipo_doc,
+        $FK_rol
     ) {
         $datosController[] = [
             0         =>  $ID_us,
@@ -75,7 +76,10 @@ class ControllerDoc
             6         =>  $pass,
             7         =>  $foto,
             8         =>  $correo,
-            9         =>  $FK_tipo_doc
+            9         =>  $FK_tipo_doc,
+            10        =>  $FK_rol,
+            11        =>  date('Y-m-d') 
+
         ];
         return $this->objModUs->InsertUsuario($datosController, 'usuario');
         /*
