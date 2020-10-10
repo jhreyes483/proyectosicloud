@@ -1430,7 +1430,7 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
 
   //METODOS
   public function insertrRolUs($a){
-      echo 'array de rol'.'<pre>';   print_r($a);    echo '</pre>';
+     // echo 'array de rol'.'<pre>';   print_r($a);    echo '</pre>';
    // include_once 'class.conexion.php'; 
            /*
            $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
