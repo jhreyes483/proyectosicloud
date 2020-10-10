@@ -37,8 +37,7 @@ class SQL extends Conexion{
 
 
    // METODO INSERT USUARIO PDO MVC ---------------------------------------------------------------------
-   public function InsertUsuario($a){
-       echo '<pre>'; print_r($a); echo '</pre>';
+   public function InsertUsuario($a){ 
       $sql = "INSERT INTO usuario (ID_us, nom1, nom2, ape1, ape2, fecha, pass, foto, correo, FK_tipo_doc)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
       $insertar = $this->db->prepare($sql);
@@ -1441,7 +1440,7 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
             $stm->bindValue( 2 ,$d[0]  );
             $stm->bindValue( 3 ,$d[9]  );
             $stm->bindValue( 4 ,$d[11] );
-            $stm->bindValue( 5 ,$d[12] );
+            $stm->bindValue( 5 ,0 );
             $bool =   $stm->execute();
             if($bool){
                return true;
