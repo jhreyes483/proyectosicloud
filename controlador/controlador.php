@@ -83,8 +83,9 @@ class ControllerDoc
 
         ];
 
-         $bool1 = $this->objModUs->InsertUsuario($datosController, 'usuario');
-         if($bool1 == true)  $this->objModUs-> insertrRolUs($datosController);
+         //$bool1 = $this->objModUs->InsertUsuario($datosController, 'usuario');
+          //if($bool1 == true)  
+          $bool1 =  $this->objModUs-> insertrRolUs($datosController);
         return $bool1;
         /*
            // Insercion de foto
