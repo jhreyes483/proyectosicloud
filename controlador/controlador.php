@@ -37,7 +37,10 @@ class ControllerDoc
         $foto1,
         $correo,
         $FK_tipo_doc,
-        $FK_rol
+        $FK_rol,
+        $fechaC,
+        $estado,
+        $ruta
     ) {
         $datosController[] = [
             0         =>  $ID_us,
@@ -51,21 +54,20 @@ class ControllerDoc
             8         =>  $correo,
             9         =>  $FK_tipo_doc,
             10        =>  $FK_rol,
-            11        =>  date('Y-m-d'),
-            12        =>  0 
-
+            11        =>  $fechaC,
+            12        =>  $estado,
+            13        =>  $ruta
         ];
-
          $bool0 = $this->objModUs->InsertUsuario($datosController, 'usuario');
         if($bool0){
              $bool1 = $this->objModUs->insertrRolUs($datosController);
         if($bool1){
-            // Insercion de foto
+        // Insercion de foto
            //$foto = $_FILES['foto']['name'];
           // $ruta = $_FILES['foto']['tmp_name'];
-          // $destino = './fonts/us/'.$foto1;
-          // copy($ruta, $destino);
-          // $this->objModUs->inserTfotoUs(  $foto1 ,  $ID_us );
+           $destino = '../vista/fonts/us/'.$foto1;
+           copy($ruta, $destino);
+           $this->objModUs->inserTfotoUs(  $foto1 ,  $ID_us );
         }
  
     

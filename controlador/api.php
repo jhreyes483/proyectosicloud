@@ -50,12 +50,14 @@ if(isset($_GET['apicall'])){
          $_POST['ape2'],
          $_POST['fecha'],    
          $_POST['pass'],
-         $_POST['foto'],
-       // $_FILES['foto']['name'],
+        // $_POST['foto'],
+         $_FILES['foto']['name'],
          $_POST['correo'],
          $_POST['FK_tipo_doc'],
-         $_POST['FK_rol']
-      //   $_FILES['foto']['tmp_name']
+         $_POST['FK_rol'],
+         date('Y-m-d'),
+         0,
+         $_FILES['foto']['tmp_name']
       );  
       if($result){
          //esto significa que no hay ningun error

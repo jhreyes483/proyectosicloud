@@ -88,9 +88,8 @@ cardtitulo("Registro de Usuarios");
                 <h5>Digite su contraseña: </h5>
                 <input class="form-control" type="password" name="pass" required autofocus maxlength="25"><br>
                 <h5>Adjunte Foto de Perfil: </h5>
-                <div >
-                    <input type="text"  name="foto">
-                    <!-- class="custom-file-input" id="customFile" -->
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" name="foto">
                     <label class="custom-file-label" for="customFile">Seleccione una imagen desde su equipo</label>
                 </div><br><br>
                 <h5>Digite su Telefono: </h5>
