@@ -38,6 +38,7 @@ class SQL extends Conexion{
 
    // METODO INSERT USUARIO PDO MVC ---------------------------------------------------------------------
    public function InsertUsuario($a){
+       echo '<pre>'; print_r($a); echo '</pre>';
       $sql = "INSERT INTO usuario (ID_us, nom1, nom2, ape1, ape2, fecha, pass, foto, correo, FK_tipo_doc)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
       $insertar = $this->db->prepare($sql);
