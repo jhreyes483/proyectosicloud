@@ -40,7 +40,7 @@ if(isset($_GET['apicall'])){
       // Opcion crear usuarios
       case 'createusuario':
       // Primero haremos la verificacion de parametros.
-      isTheseParametersAvailable(  [ 'ID_us','nom1','nom2', 'ape1', 'ape2','fecha', 'pass', 'foto', 'correo','FK_tipo_doc' ]  );
+      isTheseParametersAvailable(  [ 'ID_us','nom1','nom2', 'ape1', 'ape2','fecha', 'pass', 'correo','FK_tipo_doc' ]  );
      // $db = new ControllerDoc();
       $result = $db->createUsuariosController(
          $_POST['ID_us'], 
@@ -51,9 +51,11 @@ if(isset($_GET['apicall'])){
          $_POST['fecha'],    
          $_POST['pass'],
          $_POST['foto'],
+       // $_FILES['foto']['name'],
          $_POST['correo'],
          $_POST['FK_tipo_doc'],
-         $_POST['FK_rol'] 
+         $_POST['FK_rol']
+      //   $_FILES['foto']['tmp_name']
       );  
       if($result){
          //esto significa que no hay ningun error

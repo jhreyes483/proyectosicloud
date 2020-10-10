@@ -84,17 +84,19 @@ class SQL extends Conexion{
    AND TD.ID_acronimo  = :ID_acronimo";
    //AND identificacion = :identificacion";
    $consulta = $this->db->prepare($sql);
+
+ 
    foreach($datosModel as $i =>  $d ){
-      $consulta->bindValue( ':ID_us',       $d[0] );
-      $consulta->bindValue( ':pass',        $d[1] );
-      $consulta->bindValue( ':ID_acronimo', $d[2] );
-      echo'<pre>'; print_r($datosModel); echo'</pre>';
+      $consulta->bindValue( ':ID_us',       $d[0] , PDO::PARAM_STR);
+      $consulta->bindValue( ':pass',        $d[1] , PDO::PARAM_STR );
+      $consulta->bindValue( ':ID_acronimo', $d[2], PDO::PARAM_STR );
    }
    $consulta->execute();
+
+
   // $array = $consulta->fetchAll();
       if( $consulta->rowCount() > 0 ){ 
          $USER = $consulta->fetch(PDO::FETCH_ASSOC);
-         
          if( !isset( $_SESSION['usuario']) ){
             session_start(); 
             $_SESSION['usuario']  = $USER;
@@ -108,7 +110,7 @@ class SQL extends Conexion{
 
          return  $USER ;
       }else{
-         return false;
+        // return false;
       }
    }
    //-------------------------------------------------------------------------------------------------------
@@ -1364,20 +1366,16 @@ public function verPago(){
    }
 
 
-   public function inserTfoto($destino, $id)
-   {
-       //include_once 'class.conexion.php';
-       //$c = new Conexion;
-       $sql = "UPDATE  producto SET img = ('$destino') where ID_prod = '$id'";
-       //$e = $c->query($sql);
+   public function inserTfotoUs( $foto,  $id_us){
+       $sql = "UPDATE  usuario SET foto = ? where ID_us = ? ";
        $consulta = $this->db->prepare($sql);
-       $result = $consulta->execute();
-       $result = $consulta->fetchAll();
-       return $result;
-       if ($result) {
-           header("location: ../vista/CU004-crearproductos.php");
-       }
+       $consulta->bindValue( 1 ,  $foto, PDO::PARAM_STR );
+       $consulta->bindValue( 2 ,  $id_us, PDO::PARAM_STR );
+       $consulta = $consulta->execute();
+       return true;
    }
+
+
 
 
    public function verProductosIdCarrito($id)
@@ -1429,28 +1427,43 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
 //CROL USUARIO
 
   //METODOS
+
+
+
+
+
   public function insertrRolUs($a){
-     // echo 'array de rol'.'<pre>';   print_r($a);    echo '</pre>';
-   // include_once 'class.conexion.php'; 
-           /*
+      echo 'array de rol'.'<pre>';   print_r($a);    echo '</pre>';
            $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
-            VALUES (?, ?, ?, ?, ?)";
+            VALUES (?,?,?,?,?)";
+
+            // $STH->bindParam(':12', $_POST['napomena'], PDO::PARAM_STR);
+            //PDO::PARAM_INT
+            //PDO::PARAM_STR
             $stm = $this->db->prepare($sql);
-            */
             foreach( $a as $i => $d ){
-         /*   $stm->bindValue( 1, $d[10] );
-            $stm->bindValue( 2 ,$d[0]  );
-            $stm->bindValue( 3 ,$d[9]  );
-            $stm->bindValue( 4 ,$d[11] );
-           $stm->bindValue( 5 ,0 ); 
-            $bool = $stm->execute();
-           */  echo $d[10].' '.$d[0].' '.$d[9].' '.$d[11];
-          /*  if($bool){
+          $stm->bindValue( 1, $d[10], PDO::PARAM_INT );
+          $stm->bindValue( 2 ,$d[0] , PDO::PARAM_STR );
+          $stm->bindValue( 3 ,$d[9] , PDO::PARAM_STR  );
+          $stm->bindValue( 4 ,$d[11] , PDO::PARAM_STR );
+          $stm->bindValue( 5 ,$d[12] ,  PDO::PARAM_STR );
+         }
+         echo $sql;
+         $bool = $stm->execute();
+        
+      
+           
+        
+            if($bool){
+               echo '<script>alert("inserto datos de usario");</script>';
                return true;
             }else{
-         */      return $a;
-            }
+               echo '<script>alert("No inserto datos");</script>';
+               return $a;
+         
         }
+      
+      }
    
 
 //========================================

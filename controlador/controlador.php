@@ -2,21 +2,7 @@
 <?php
 //session_destroy();
 include_once '../modelo/class.sql.php';
-/*
-include_once '../modelo/class.documento.php';
 
-include_once '../modelo/class.rol.php';
-include_once '../modelo/class.categoria.php';
-include_once '../modelo/class.medida.php';
-include_once '../modelo/class.proveedor.php';
-include_once '../modelo/class.producto.php';
-include_once '../modelo/class.factura.php';
-include_once '../modelo/class.modificacion.php';
-include_once '../modelo/class.ciudad.php';
-include_once '../modelo/class.empresa.php';
-include_once '../modelo/class.error.php';
-include_once '../modelo/class.telefono.php';
-*/
 class ControllerDoc
 {
     public $objModUs;
@@ -25,20 +11,7 @@ class ControllerDoc
     {
         $this->objModUs   =  SQL::ningunDato();
 
-        /*
-        $this->obModDoc   =  Documento::ningunDatoD();
-        $this->objModRol  =  Rol::ningunDato();
-        $this->objModCat  =  Categoria::ningunDatoC();
-        $this->objModMed  =  Medida::ningunDatoM();
-        $this->objModPro  =  Proveedor::ningunDatoP();
-        $this->objModProd =  Producto::ningunDatoP();
-        $this->objModFact =  Factura::ningunDato();
-        $this->objModModi =  Modificacion::ningunDato();
-        $this->objModCiu  =  Ciudad::ningunDato();
-        $this->objModEmp  =  Empresa::ningunDatoP();
-        $this->objModError=  ErrorLog::ningunDato();
-        $this->objModTel =  Telefono::ningunDato();
-        */
+
     }
     public function selectDocumento()
     {
@@ -61,7 +34,7 @@ class ControllerDoc
         $ape2,
         $fecha,
         $pass,
-        $foto,
+        $foto1,
         $correo,
         $FK_tipo_doc,
         $FK_rol
@@ -74,7 +47,7 @@ class ControllerDoc
             4         =>  $ape2,
             5         =>  $fecha,
             6         =>  $pass,
-            7         =>  $foto,
+            7         =>  $foto1,
             8         =>  $correo,
             9         =>  $FK_tipo_doc,
             10        =>  $FK_rol,
@@ -83,10 +56,23 @@ class ControllerDoc
 
         ];
 
-         //$bool1 = $this->objModUs->InsertUsuario($datosController, 'usuario');
-          //if($bool1 == true)  
-          $bool1 =  $this->objModUs-> insertrRolUs($datosController);
-        return $bool1;
+         $bool0 = $this->objModUs->InsertUsuario($datosController, 'usuario');
+        if($bool0){
+             $bool1 = $this->objModUs->insertrRolUs($datosController);
+        if($bool1){
+            // Insercion de foto
+           //$foto = $_FILES['foto']['name'];
+          // $ruta = $_FILES['foto']['tmp_name'];
+          // $destino = './fonts/us/'.$foto1;
+          // copy($ruta, $destino);
+          // $this->objModUs->inserTfotoUs(  $foto1 ,  $ID_us );
+        }
+ 
+    
+    }}
+
+
+        
         /*
            // Insercion de foto
            $foto = $_FILES['foto']['name'];
@@ -97,7 +83,7 @@ class ControllerDoc
           $i = $us->inserTfoto($destino, $ID_us);
 
           */
-    }
+    
     public function readUsuariosController()
     {
         return $this->objModUs->readUsuarioModel('vendedor');
