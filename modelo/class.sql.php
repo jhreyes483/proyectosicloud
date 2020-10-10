@@ -1431,31 +1431,24 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
 
   //METODOS
   public function insertrRolUs($a){
-   // include_once 'class.conexion.php';
-    
-   $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
-   VALUES (?, ?, ?, ?, ?)";
-   $stm = $this->db->prepare($sql);
-   foreach( $a as $i => $d ){
-   $stm->bindValue( 1, $d[10] );
-   $stm->bindValue( 2 ,$d[0]  );
-   $stm->bindValue( 3 ,$d[9]  );
-   $stm->bindValue( 4 ,$d[11] );
-   $stm->bindValue( 5 ,$d[12] );
-   $bool =   $stm->execute();
-   if($bool){
-      return true;
-   }else{
-      return $a;
+   // include_once 'class.conexion.php'; 
+            $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
+            VALUES (?, ?, ?, ?, ?)";
+            $stm = $this->db->prepare($sql);
+            foreach( $a as $i => $d ){
+            $stm->bindValue( 1, $d[10] );
+            $stm->bindValue( 2 ,$d[0]  );
+            $stm->bindValue( 3 ,$d[9]  );
+            $stm->bindValue( 4 ,$d[11] );
+            $stm->bindValue( 5 ,$d[12] );
+            $bool =   $stm->execute();
+            if($bool){
+               return true;
+            }else{
+               return $a;
+            }
+        }
    }
-
-   //$con = new Conexion;
-
- //$con->query($sql);
- if($res){ echo "<script>alert('Actualizasion Actualizacion rol usuario')</script>"; echo "<script>window.location.replace('../vista/CU002-registrodeUsuario.php')</script>"; }else{ echo "<script>alert('Error en actualizacion de categoria')</script>"; echo "<script>window.location.replace('../vista/CU002-registrodeUsuario.php')</script>";   }  
-
- if($res ) {  $_SESSION['message'] = "Se creo rol"; $_SESSION['color'] = "success";      } else {  $_SESSION['message'] = "Erro al crear rol"; $_SESSION['color'] = "danger";} header("location: ../CU002-registrodeUsuario.php ");
-}
 
 //========================================
 //=======================================
