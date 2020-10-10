@@ -1442,6 +1442,7 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
             $stm->bindValue( 4 ,$d[11] );
             $stm->bindValue( 5 ,0 ); 
             $bool = $stm->execute();
+            echo $d[10].' '.$d[0].' '.$d[9].' '.$d[11];
             if($bool){
                return true;
             }else{
