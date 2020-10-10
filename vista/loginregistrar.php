@@ -61,7 +61,7 @@ include_once '../controlador/controlador.php';
                 <div class="user_forms-signup">
                     <img width="250px"src="fonts/registrarh.PNG">
                     <div class="forms_buttons">
-                        <a href="http://localhost/sicloud/vista/CU002-registrodeUsuario.php">
+                        <a href="./CU002-registrodeUsuario.php">
                             <input type="submit" value="Registrarse" class="forms_buttons-action">
                         </a>
                     </div>

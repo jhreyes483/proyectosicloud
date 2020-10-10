@@ -60,7 +60,7 @@ if (  !isset($cons)  ){
    }
 
    function rutFinFooterFromRaiz(){
-      include_once 'vista/plantillas/cuerpo/footerN1.php';
+      include_once 'vista/plantillas/cuerpo/footerN0.php';
       include_once 'vista/plantillas/cuerpo/finhtml.php';
    }
 
