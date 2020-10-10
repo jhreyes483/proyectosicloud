@@ -1430,17 +1430,24 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
 //CROL USUARIO
 
   //METODOS
-  public function insertrRolUs(){
+  public function insertrRolUs($a){
    // include_once 'class.conexion.php';
     
-   $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)VALUES('$this->FK_rol' , '$this->FK_us','$this->FK_tipo_doc','$this->fecha_asignacion','$this->estado')";
+   $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
+   VALUES (?, ?, ?, ?, ?)";
    $stm = $this->db->prepare($sql);
-   $stm->bindValue(":FK_rol",$this->FK_rol);
-   $stm->bindValue(":FK_us",$this->FK_us);
-   $stm->bindValue(":FK_tipo_doc",$this->FK_tipo_doc);
-   $stm->bindValue(":fecha_asignacion",$this->fecha_asignacion);
-   $stm->bindValue(":estado",$this->estado);
-   $res = $stm->execute();
+   foreach( $a as $i => $d ){
+   $stm->bindValue( 1, $d[10] );
+   $stm->bindValue( 2 ,$d[0]  );
+   $stm->bindValue( 3 ,$d[9]  );
+   $stm->bindValue( 4 ,$d[11] );
+   $stm->bindValue( 5 ,$d[12] );
+   $bool =   $stm->execute();
+   if($bool){
+      return true;
+   }else{
+      return $a;
+   }
 
    //$con = new Conexion;
 
