@@ -1432,21 +1432,23 @@ public function insertPuntos( $FK_us , $FK_tipo_doc)
   public function insertrRolUs($a){
       echo 'array de rol'.'<pre>';   print_r($a);    echo '</pre>';
    // include_once 'class.conexion.php'; 
-            $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
+           /*
+           $sql = "INSERT INTO rol_usuario(FK_rol,FK_us,FK_tipo_doc,fecha_asignacion,estado)
             VALUES (?, ?, ?, ?, ?)";
             $stm = $this->db->prepare($sql);
+            */
             foreach( $a as $i => $d ){
-            $stm->bindValue( 1, $d[10] );
+         /*   $stm->bindValue( 1, $d[10] );
             $stm->bindValue( 2 ,$d[0]  );
             $stm->bindValue( 3 ,$d[9]  );
             $stm->bindValue( 4 ,$d[11] );
-            $stm->bindValue( 5 ,0 ); 
+           $stm->bindValue( 5 ,0 ); 
             $bool = $stm->execute();
-            echo $d[10].' '.$d[0].' '.$d[9].' '.$d[11];
-            if($bool){
+           */  echo $d[10].' '.$d[0].' '.$d[9].' '.$d[11];
+          /*  if($bool){
                return true;
             }else{
-               return $a;
+         /*      return $a;
             }
         }
    }
