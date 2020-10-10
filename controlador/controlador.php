@@ -78,10 +78,14 @@ class ControllerDoc
             8         =>  $correo,
             9         =>  $FK_tipo_doc,
             10        =>  $FK_rol,
-            11        =>  date('Y-m-d') 
+            11        =>  date('Y-m-d'),
+            12        =>  0 
 
         ];
-        return $this->objModUs->InsertUsuario($datosController, 'usuario');
+
+         $bool1 = $this->objModUs->InsertUsuario($datosController, 'usuario');
+         if($bool1 == true)  $this->objModUs-> insertrRolUs($datosController);
+        return $bool1;
         /*
            // Insercion de foto
            $foto = $_FILES['foto']['name'];
